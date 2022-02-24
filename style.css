@@ -1,13 +1,31 @@
 * {
 	box-sizing: border-box;
 }
+
 body {
 	background: linear-gradient(#794d22, #362419);
-	color: lightgray;
-	font-family: 'Open Sans Condensed', sans-serif;
-	font-size: 21px;
+	font-size: 30px;
 	height: 100vh;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
 }
+
+p {
+    font-size: 20px;
+    color: lightgray;
+}
+
+h2 {
+    font-size: 3em;
+    white-space: nowrap;
+    display: center;
+    color: lightgray;
+  }
+
+h3{
+    font-size: 25px;
+    color: lightgray;
+  }
 
 .box {
 	max-width: 1024px;
@@ -20,4 +38,28 @@ body {
 .story {
 	width: 75%;
 	text-align: justify;
+}
+
+button {
+    font-size: 40px;
+    display: block;
+    max-width: 350px;
+    max-height: 350px;
+    margin: auto;
+    background: #654321;
+    color: lightgray;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    border-radius: 3px;
+    padding: 20px;
+  }
+
+button:hover{
+    background: #4b3621;
+    color: gray;
+}
+
+#choices{
+    display: flex;
+    justify-content: space-around;
 }
