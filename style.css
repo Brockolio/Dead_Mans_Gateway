@@ -1,65 +1,27 @@
-* {
-	box-sizing: border-box;
-}
-
 body {
-	background: linear-gradient(#794d22, #362419);
-	font-size: 30px;
-	height: 100vh;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+  background: rgb(59, 58, 58);
+  font-family: 'Lucida Console', monospace;
+  text-align: center;
 }
 
-p {
-    font-size: 20px;
-    color: lightgray;
+h1 {
+  padding-top: 3vw;
+  font-size: 4em;
+  white-space: nowrap;
+  display: center;
+  color: white;
 }
 
 h2 {
-    font-size: 3em;
-    white-space: nowrap;
-    display: center;
-    color: lightgray;
-  }
-
-h3{
-    font-size: 25px;
-    color: lightgray;
-  }
-
-.box {
-	max-width: 1024px;
-	margin: 0 auto;
-	padding: 0.75rem;
-	display: flex;
-	justify-content: space-between;
-}
-
-.story {
-	width: 75%;
-	text-align: justify;
+  color: white;
+  padding: 1vw;
 }
 
 button {
-    font-size: 40px;
-    display: block;
-    max-width: 350px;
-    max-height: 350px;
-    margin: auto;
-    background: #654321;
-    color: lightgray;
-    cursor: pointer;
-    transition: all 0.1s ease;
-    border-radius: 3px;
-    padding: 20px;
-  }
-
-button:hover{
-    background: #4b3621;
-    color: gray;
-}
-
-#choices{
-    display: flex;
-    justify-content: space-around;
+  font-size: 38px;
+  display: block;
+  max-width: 300px;
+  max-height: 300px;
+  margin: auto;
+  padding: 10px;
 }
