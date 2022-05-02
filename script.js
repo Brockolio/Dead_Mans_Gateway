@@ -161,6 +161,10 @@ window.onload = function () {//encases all code, makes sure all JS is loaded bef
     };
     var playerChoices = ["opener"];
 
+    var playArea = document.getElementById("playArea");
+    var buttonArea = document.getElementById("btnArea");
+    var startButton = document.getElementById("startButton");
+
     function createButton(btnText, choice) {
         var button = document.createElement("button");
         button.innerHTML = btnText;
@@ -169,10 +173,10 @@ window.onload = function () {//encases all code, makes sure all JS is loaded bef
         button.addEventListener("click", function () {
             playerChoices.push(choice);
             createStory();
-            window.scrollTo({ behavior: 'smooth' })
         });
+    }
 
-        function addstory(text) {
+        function addStory(text) {
             playArea.innerHTML = text;
         }
 
@@ -181,11 +185,13 @@ window.onload = function () {//encases all code, makes sure all JS is loaded bef
             playArea.innerHTML = "";
             buttonArea.innerHTML = "";
             for (let idea of playerChoices) {
-                addStory(story[idea].text)
+                addStory(story[idea].text);
             }
             for (let idea of story[pageNow].options) {
                 createButton(idea[1], idea[0]);
             }
         }
-    }
+    startButton.addEventListener("click", function () {
+        createStory();
+    })
 }

@@ -25,3 +25,13 @@ button {
   margin: auto;
   padding: 10px;
 }
+
+#btnArea{
+  display: flex;
+  justify-content: space-around;
+}
+
+#playArea {
+  font-size: 50px;
+  padding: 40px;
+}
