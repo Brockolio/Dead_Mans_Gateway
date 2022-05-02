@@ -140,22 +140,18 @@ window.onload = function () {//encases all code, makes sure all JS is loaded bef
 
         possessed: {//The second ending
             text: "You feel yourself being shoved out of your body. You look to see yourself smiling, and then leaving the house, damning your soul forevermore in this tomb until another body comes.",
-            options: ["opener", "Restart"]
         },
 
         vaultgate: {//The third ending
             text: "You grab the gate and vault yourself up their, flinging yourself body up into the muck. You stomp off, feeling as though somebody followed you along, and when you turn around you see a twirling ghostly figure at the corner of your eye.",
-            options: ["opener", "Restart"]
         },
 
         soulhurty: {//The fourth ending
             text: "A bible now rests in your hands. You look through what appears to be a heavily edited book, with scribbles and random sentences in it. Without thought, you chant oneof the sentences aloud. A scream from the house echoes out. You go to where the sound is, only to find the front door open. You walk out of the house, satisfied with your work.",
-            options: ["opener", "Restart"]
         },
 
         puzzle: {//The fifth ending
             text: "You say Time outloud and the box oppens and inside of the box is a watch and as you pickup the watch everything seems to stop. The house was silent but now seemingly even more so. They crickets that were chirpping stopped and the creeks of the floor boards. You soon come to the realisation that you are trapped in time and now have to face that fact that you can never escape the endless cycle.",
-            options: ["opener", "Restart"]
         },
     };
     var playerChoices = ["opener"];
