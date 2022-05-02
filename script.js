@@ -136,7 +136,6 @@ window.onload = function () {//encases all code, makes sure all JS is loaded bef
 
         funnyend: {//The first ending
             text: "NOOOOPE!!! You immediately make a 180 as you sprint out of the house and through the mud into your car, as you hear laughter behind you.",
-            options: ["opener", "Restart"]
         },
 
         possessed: {//The second ending
