@@ -44,14 +44,19 @@ window.onload = function () {//encases all code, makes sure all JS is loaded bef
             options: [["fence", "Go to the fence"], ["shed", "Head into the shed"], ["returninside", "Go back inside"]]
         },
 
-        fence: {//the fence
-            text: "The fence is rusted and decrepit, yet still holds strong after all these years. It's easily double your size, but rust makes easy to hold on tightly without slipping. What do you do?",
-            options: [["returninside", "Go back inside"], ["vaultgate", "Vault the Fence"]]
+        shed:{//Jumpscare
+            text: "The shed creaks open, rusty hinges squealing. Inside is a hideous sight to behold. A small corpse, with a victorian dress on her. You jolt, then vomit, as a spider crawls out of the carcas. You spin out and slam the door behind you. A scratching is heard moments later. What now?",
+            options: [[], []]
         },
 
-        returninside: {//allows to go back inside
-            text: "Which room do you go to?",
-            options: [["library", "Go to the Library"], ["livingroom", "Go to the Living Room"]]
+        returninside:{//how to get back inside
+            text: "Where do you want to go?",
+            options: [["library"], ["livingroom"]]
+        },
+
+        fence: {
+          text: "The fence is rusted abd decrepit, yet still holds strong after all these years. It's easily double your size, but rust makes easy to hold on tightly without slipping. What do you do?",
+          options:[["returninside", "Go back inside"], ["Vault the Fence", "vaultgate"]]
         },
 
         wannahelp: {//offer to help the ghost
@@ -59,14 +64,14 @@ window.onload = function () {//encases all code, makes sure all JS is loaded bef
             options: [["possessed", "Approach"], ["timeloop", "I can set you free"]]
         },
 
-        timeloop: {//the loop to opener 2
+        timeloop: {//timeloop
             text: "Then I have just the thing for you.",
-            options: ["opener2", "̴́̓͐̋̕ḅ̷̲̟̣͍͈̆́̔͌̐͋́̈́͐̈́̕͘͠o̵̮̤̟̺͎͑́͗̾̏͆̍́̐̚͜ư̸̲͔̦͕̈́̉͆͊͂͆͋̉̓̓͘͝ͅć̵̅̀̉ë̶̖͙̯̣̖͛̏̿̈̔̚͜͜͝ ̵̡̧̧̢̠̲̥͓̰͙̙̘̪͂̈́́̍́d̴̨̡̧̺̼͎̝̹̗̼̓͠ͅe̶̬̺̥̰̱̖̪̅̃̒͒̂̑̑̀̿ͅț̵̹̠̣̊̏̂̆̈́͗͋̆̉̇͒́ḛ̵̡̢͓͔̗̺͔͚͉̘̟͖͉́͂͂̓̋͌͋̍͠ͅm̴̳̙̗̫͆̑̐̋͑p̸̖̱̪̈́́̐̈͂̎̾̃͋̉̚̕̕͝s̸̭̖̗̦͔͙̄̓̉"]
+            options: ["opener2", "pooL emiT"]
         },
 
         //Loop2
 
-        opener2: {//the beginning of the loop
+        opener2: {//pooL emiT
             text: "Deep in the murky woods, far from civilization now, is a house. Not a comfortable safety of our modern appliances and neighbors, but a rotting shell of the failed beginnings of a society, haunted by the pasts sins. Whether itd be from curiosity, a dare, ghost hunting... wait. havent you been here before?",
             options: [["enter2", "Yes"], ["funnyend", "NOT AGAIN"]]
         },
@@ -103,17 +108,17 @@ window.onload = function () {//encases all code, makes sure all JS is loaded bef
 
         diary1: {//the first diary entree
             text: "Dear Diary,",
-            options: ["continue1","Continue"]
+            options: ["continue1", "Continue"]
         },
 
         diary2: {//the first diary entree
             text: "Dear Diary,",
-            options: ["continue2","Continue"]
+            options: ["continue2", "Continue"]
         },
 
         diary3: {//the first diary entree
             text: "Dear Diary,",
-            options: ["continue3","Continue"]
+            options: ["continue3", "Continue"]
         },
 
         continue1: {
@@ -128,8 +133,7 @@ window.onload = function () {//encases all code, makes sure all JS is loaded bef
 
         continue3: {
             text: "NO PEAKING!",
-            options: ["̴́̓͐̋̕ḅ̷̲̟̣͍͈̆́̔͌̐͋́̈́͐̈́̕͘͠o̵̮̤̟̺͎͑́͗̾̏͆̍́̐̚͜ư̸̲͔̦͕̈́̉͆͊͂͆͋̉̓̓͘͝ͅć̵̅̀̉ë̶̖͙̯̣̖͛̏̿̈̔̚͜͜͝ ̵̡̧̧̢̠̲̥͓̰͙̙̘̪͂̈́́̍́d̴̨̡̧̺̼͎̝̹̗̼̓͠ͅe̶̬̺̥̰̱̖̪̅̃̒͒̂̑̑̀̿ͅț̵̹̠̣̊̏̂̆̈́͗͋̆̉̇͒́ḛ̵̡̢͓͔̗̺͔͚͉̘̟͖͉́͂͂̓̋͌͋̍͠ͅm̴̳̙̗̫͆̑̐̋͑p̸̖̱̪̈́́̐̈͂̎̾̃͋̉̚̕̕͝s̸̭̖̗̦͔͙̄̓̉"
-        ]
+            options: ["possessed","Oh no."]
         },
 
         //endings
@@ -171,21 +175,21 @@ window.onload = function () {//encases all code, makes sure all JS is loaded bef
         });
     }
 
-        function addStory(text) {
-            playArea.innerHTML = text;
-        }
+    function addStory(text) {
+        playArea.innerHTML = text;
+    }
 
-        function createStory(text) {
-            let pageNow = playerChoices[playerChoices.length - 1];
-            playArea.innerHTML = "";
-            buttonArea.innerHTML = "";
-            for (let idea of playerChoices) {
-                addStory(story[idea].text);
-            }
-            for (let idea of story[pageNow].options) {
-                createButton(idea[1], idea[0]);
-            }
+    function createStory(text) {
+        let pageNow = playerChoices[playerChoices.length - 1];
+        playArea.innerHTML = "";
+        buttonArea.innerHTML = "";
+        for (let idea of playerChoices) {
+            addStory(story[idea].text);
         }
+        for (let idea of story[pageNow].options) {
+            createButton(idea[1], idea[0]);
+        }
+    }
     startButton.addEventListener("click", function () {
         createStory();
     })
